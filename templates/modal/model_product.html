@@ -1,0 +1,145 @@
+<div class="modal fade" id="product_edit" data-bs-backdrop="static" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <div class="col-md-12">
+                        <h5 class="modal-title text-center" id="staticBackdropLabel">
+                            <b>Cập nhật sản phẩm</b>
+                        </h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row product-update">
+                        <div class="col-md-2">
+                            {{ editProductsForm.idProduct.label }}:
+                        </div>
+                        <div class="col-md-4">
+                            {{ editProductsForm.idProduct }}
+                        </div>
+                        <div class="col-md-2">
+                            <input type="checkbox" id="checkbox_delete" name="checkbox_delete">
+                            <label for="checkbox_delete">Xóa</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row product-update">
+                        <div class="col-md-2">
+                            {{ editProductsForm.nameProduct.label }}:
+                        </div>
+                        <div class="col-md-4">
+                            {{ editProductsForm.nameProduct }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ editProductsForm.idWarehouse.label }}:
+                        </div>
+                        <div class="col-md-4">
+                            {{ editProductsForm.idWarehouse }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row product-update">
+                        <div class="col-md-2">
+                            {{ editProductsForm.quantityProduct.label }}:
+                        </div>
+                        <div class="col-md-4">
+                            {{ editProductsForm.quantityProduct }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ editProductsForm.expirationDate.label }}:
+                        </div>
+                        <div class="col-md-4">
+                            {{ editProductsForm.expirationDate }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row product-update">
+                        <div class="col-md-2">
+                            {{ editProductsForm.descriptionProduct.label }}:
+                        </div>
+                        <div class="col-md-10">
+                            {{ editProductsForm.descriptionProduct }}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary" id="product_update">Cập nhật</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="product_add" data-bs-backdrop="static" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <div class="col-md-12">
+                        <h5 class="modal-title text-center">
+                            <b>Thêm sản phẩm</b>
+                        </h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row product-update">
+                        <div class="col-md-2">
+                            {{ editProductsForm.idProduct.label }}:
+                        </div>
+                        <div class="col-md-6">
+                            {{ editProductsForm.idProduct }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row product-update">
+                        <div class="col-md-2">
+                            {{ editProductsForm.nameProduct.label }}:
+                        </div>
+                        <div class="col-md-4">
+                            {{ editProductsForm.nameProduct }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ editProductsForm.idWarehouse.label }}:
+                        </div>
+                        <div class="col-md-4">
+                            {{ editProductsForm.idWarehouse }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row product-update">
+                        <div class="col-md-2">
+                            {{ editProductsForm.quantityProduct.label }}:
+                        </div>
+                        <div class="col-md-4">
+                            {{ editProductsForm.quantityProduct }}
+                        </div>
+                        <div class="col-md-2">
+                            {{ editProductsForm.expirationDate.label }}:
+                        </div>
+                        <div class="col-md-4">
+                            {{ editProductsForm.expirationDate }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row product-update">
+                        <div class="col-md-2">
+                            {{ editProductsForm.descriptionProduct.label }}:
+                        </div>
+                        <div class="col-md-10">
+                            {{ editProductsForm.descriptionProduct }}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary" id="product_add">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

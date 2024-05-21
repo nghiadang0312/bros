@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% block style %}
+    <style>
+        .help-use {
+            font-size: 24px;
+            padding-left: 4rem;
+        }
+
+        .card-body {
+            border-width: 0;
+            color: #0c0c0c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #51510f;
+            color: yellow;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block title %}Sản phẩm{% endblock %}
+{% block content %}
+    <div class="card mt-4">
+        <div class="card-header">Chức năng</div>
+        <div class="card-body">
+            <button type="button" class="btn-function"
+                    onclick="window.open(`${window.origin}` + '{% url 'search_product' %}', '_self');">
+                Quản lý sản phẩm
+            </button>
+            <button type="button" class="btn-function">Trả hàng NCC</button>
+            <button type="button" class="btn-function">Tìm chứng từ trả hàng NCC</button>
+        </div>
+    </div>
+{% endblock %}
